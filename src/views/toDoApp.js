@@ -10,7 +10,7 @@
                     <h5 class="card-title">${tasks[i].title}</h5>
                     <p class="card-text">${tasks[i].description}</p>
                 </div>
-            </div>
+            </div> 
             `   
         }
     }
