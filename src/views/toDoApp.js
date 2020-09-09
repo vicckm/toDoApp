@@ -17,11 +17,6 @@
 
     eachCard(tasks)
 
-    // tasks.forEach(task => {
-    //     cardTasks += `<h2>${task.title}</h2>\n`;
-    //     cardTasks += `<h2>${task.description}\n</h2>`
-    // });
-
     return `<!DOCTYPE html>
             <html lang="pt-br">
             <head>
