@@ -2,21 +2,18 @@
 
     let cardTasks = '';
 
-    function eachCard(tasks) {
-        for (let i = 0; i < tasks.length; i++) {
-            cardTasks += 
-            `<div class="card m-5" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">${tasks[i].title}</h5>
-                    <p class="card-text">${tasks[i].description}</p>
-                </div>
-            </div> 
-            `   
-        }
-    }
-
-    eachCard(tasks)
-
+    tasks.forEach((task) => {
+        cardTasks += 
+        `<div class="card m-5" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">${task.title}</h5>
+                <p class="card-text">${task.description}</p>
+                <p class="card-text">${task.status}</p>
+            </div>
+        </div> 
+        `    
+    });    
+            
     return `<!DOCTYPE html>
             <html lang="pt-br">
             <head>
@@ -34,18 +31,17 @@
                     <div class="w-50 p-4 border rounded shadow-sm"> 
                         <form class="flex-fill">
                             <div class="form-group">
-                                <label for="tituloTarefa"><b>Título:</b></label>
-                                <input type="text" class="form-control" id="tituloTarefa" placeholder="Título da tarefa">
+                                <label for="titleTask"><b>Title:</b></label>
+                                <input type="text" class="form-control" id="titleTask" placeholder="Task Title">
                             </div>
                             <div class="form-group">
-                                <label for="descricaoTarefa"><b>Descrição:</b></label>
-                                <textarea class="form-control" id="descricaoTarefa" rows="3" placeholder="Insira a descrição da tarefa"></textarea>
+                                <label for="descriptionTask"><b>Description:</b></label>
+                                <textarea class="form-control" id="descriptionTask" rows="3" placeholder="Enter the task description"></textarea>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div id="todoCard">
-                    <!-- Aqui entram os cards de TODO!-->
+                <div id="todoCard" class="d-flex justify-content-center">
                     ${cardTasks}
                 </div>
                 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -6,7 +6,7 @@ const routes = require('./src/routes/routes');
 routes(app);
 
 app.listen(port, () => {
-  console.log("Servidor iniciado :)");
+  console.log("Server started :)");
 });
 
 module.exports = app;
