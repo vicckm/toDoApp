@@ -39,7 +39,7 @@ INSERT INTO tasks (
     'Havent started yet'
 );`;
 
-function errorAndExit(err) {
+function exitError(err) {
     console.log(err.message);
     process.exit(1);
 }
@@ -47,25 +47,25 @@ function errorAndExit(err) {
 db.serialize( () => {
     // db.run(schemaTableUsers, (err) => {
     //     if (err) {
-    //         errorAndExit(err);
+    //          exitError(err);
     //     }
     // });
 
     // db.run(schemaTableTasks, (err) => {
     //     if(err) {
-    //         errorAndExit(err);
+    //          exitError(err);
     //     }
     // });
 
     // db.run(addValuesUsers, (err) => {
     //     if(err) {
-    //         errorAndExit(err);
+    //         exitError(err);
     //     }
     // });
 
     db.run(addValuesTasks, (err) => {
         if(err) {
-            errorAndExit(err);
+            exitError(err);
         }
     })
 });

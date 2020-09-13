@@ -1,4 +1,4 @@
- function createPageToDo(tasks) {
+ function createPage(tasks) {
 
     let cardTasks = '';
 
@@ -9,6 +9,8 @@
                 <h5 class="card-title">${task.title}</h5>
                 <p class="card-text">${task.description}</p>
                 <p class="card-text">${task.status}</p>
+                <a href="#" class="card-link">To Edit</a>
+                <a href="#" class="card-link">To Archive</a>
             </div>
         </div> 
         `    
@@ -53,4 +55,4 @@
  };
  
 
-module.exports = createPageToDo;
+module.exports = createPage;

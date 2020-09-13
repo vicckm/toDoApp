@@ -1,14 +1,8 @@
-const createPageToDo = require("../views/toDoApp");
-const db = require("../configs/database/db");
+
+// const db = require("../configs/database/db");
+// const TasksDao = require("../configs/dao/tasks-dao");
+const TasksController = require('../controllers/TasksController');
 
 module.exports = (app) => {
-  app.get("/", (req, res) => {
-    db.all("SELECT * FROM tasks", (err, rows) => {
-      if (rows.length > 0) {
-        res.send(createPageToDo(rows));
-      } else {
-        res.send(createPageToDo());
-      }
-    });
-  });
+  app.get("/", TasksController.generateTask());
 };

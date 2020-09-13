@@ -8,4 +8,10 @@ process.on('SIGINT', () => {
     });
 });
 
+// db.serialize( () => {
+//     db.all(`SELECT * FROM tasks WHERE title like ? `, ['Programming'],(err, rows) => {
+//         console.log(rows)
+//     })
+// })
+
 module.exports = db;
