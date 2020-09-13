@@ -4,15 +4,10 @@
 
 ## Installation
 
-To use this project is necessary install these packages below
+To use this project is necessary install this package below
 
 ```bash
 npm install 
 ```
-```bash
-npm install express 
-```
-```bash
-npm install sqlite3@latest
-```
+
 
