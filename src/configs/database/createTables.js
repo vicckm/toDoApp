@@ -17,16 +17,16 @@ CREATE TABLE IF NOT EXISTS tasks (
     status VARCHAR(30)
 );`;
 
-// const addValuesUsers = `
-// INSERT INTO users (
-//     name,
-//     email,
-//     password
-// ) VALUES (
-//     'Victoria',
-//     'vicck.rj@gmail.com',
-//     123456
-// );`;
+const addValuesUsers = `
+INSERT INTO users (
+    name,
+    email,
+    password
+) VALUES (
+    'Victoria',
+    'vicck.rj@gmail.com',
+    123456
+);`;
 
 const addValuesTasks = `
 INSERT INTO tasks (

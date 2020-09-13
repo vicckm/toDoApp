@@ -1,20 +1,10 @@
+ const card = require('./templateCard');
+
  function createPage(tasks) {
 
     let cardTasks = '';
 
-    tasks.forEach((task) => {
-        cardTasks += 
-        `<div class="card m-5" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">${task.title}</h5>
-                <p class="card-text">${task.description}</p>
-                <p class="card-text">${task.status}</p>
-                <a href="#" class="card-link">To Edit</a>
-                <a href="#" class="card-link">To Archive</a>
-            </div>
-        </div> 
-        `    
-    });    
+    tasks.forEach( task => cardTasks += card(task));
             
     return `<!DOCTYPE html>
             <html lang="pt-br">
