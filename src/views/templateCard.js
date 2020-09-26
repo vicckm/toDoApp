@@ -1,14 +1,18 @@
 function card(task) {
-    return `<div class="card m-5" style="width: 18rem;">
-        <div class="card-body">
-        <h5 class="card-title">${task.title}</h5>
-        <p class="card-text">${task.description}</p>
-        <p class="card-text">${task.status}</p>
-        <a href="#" class="card-link">To Edit</a>
-        <a href="#" class="card-link">To Archive</a>
-    </div>
-</div> 
-`;    
+    return `
+        <div class="card" data-id-task="${task.id}">
+            <h1 class="title">${task.title}</h1>
+            <p class="description">${task.description}</p>
+
+            <div class="bottom-card">
+                <p class="status">${task.status}</p>
+
+                <div class="icon-group">
+                    <button type="submit" class="icon"><img src="../static/img/pencil.svg" alt="To edit"></button>
+                    <button type="submit" class="icon" onclick="deleteTask(event)"><img src="../static/img/trash.svg" alt="To delete"></button>
+                </div>
+            </div>
+        </div> `;    
 }
 
 module.exports = card;
