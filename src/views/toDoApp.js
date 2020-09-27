@@ -28,13 +28,13 @@ const card = require("./templateCard");
         <section>
             <div class="container">
                 <form class="form" id="form" action="/tasks" method='POST'>
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="idTask" value="null">
+                    
                     <fieldset>
                         <legend>What's your task today?</legend>
                         <span class="border"></span>
-    
-                        <input type="hidden" name="_method" value="PUT">
-                        <input type="hidden" name="idTask" value="null">
-    
+
                         <div class="items">
                             <label for="titleTask">Title:</label>
                             <input type="text" name='titleTask' id="titleTask" placeholder="Task Title">

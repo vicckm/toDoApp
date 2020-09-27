@@ -92,7 +92,8 @@ textarea {
     height: 100px;
     background: none;
     resize: vertical;
-    margin: 10px 0
+    margin: 10px 0;
+    padding:5px;
 }
 
 input, textarea {
@@ -123,7 +124,7 @@ input, textarea {
 }
 
 .card {
-    height: 250px;
+    position: relative;
     width: 200px;
     border: 2px solid var(--color-borda);
     padding: 15px;
@@ -136,12 +137,12 @@ input, textarea {
     color: var(--color-principal);
     font-size: 20px;
     margin-bottom: 10px;
+    height: 50px;
 }
 
 .description {
     color: var(--color-texto);
     margin-bottom: 15px;
-    height: 135px;
 }
 
 .status {

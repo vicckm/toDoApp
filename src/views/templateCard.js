@@ -8,7 +8,7 @@ function card(task) {
                 <p class="status">${task.status}</p>
 
                 <div class="icon-group">
-                    <button type="submit" class="icon"><img src="../static/img/pencil.svg" alt="To edit"></button>
+                    <button type="submit" class="icon edit"><img src="../static/img/pencil.svg" alt="To edit"></button>
                     <button type="submit" class="icon" onclick="deleteTask(event)"><img src="../static/img/trash.svg" alt="To delete"></button>
                 </div>
             </div>
