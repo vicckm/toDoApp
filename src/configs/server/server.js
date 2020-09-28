@@ -1,7 +1,7 @@
 const { app } = require("../server/custom-express");
 const middlewares = require('../middlewares/middlewares');
 const routes = require("../../routes/routes");
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 middlewares(app);
 
