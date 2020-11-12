@@ -12,7 +12,7 @@ npm install
 
 ## Demo
 
-To see a preview, click [here](https://guarded-atoll-34072.herokuapp.com/)
+To see a preview, click [here](https://salty-crag-56577.herokuapp.com/)
 
 ## Routes Used
 
